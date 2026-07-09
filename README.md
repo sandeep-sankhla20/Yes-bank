@@ -72,7 +72,7 @@ The model explains ~96.6% of the variance in monthly closing price using only th
 
 ## 🔗 Project Repository
 
-[github.com/sandeep-sankhla20/Yes-bank](https://github.com/sandeep-sankhla20/Yes-bank)
+[github.com/sandeep-sankhla20/Yes-bank](https://github.com/sandeep-sankhla20/YesBank-Stock-Prediction)
 
 ## ✍️ Author
 
