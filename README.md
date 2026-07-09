@@ -52,27 +52,49 @@ The model explains ~96.6% of the variance in monthly closing price using only th
 - scipy.stats (hypothesis testing)
 - matplotlib, seaborn (visualization)
 
+## 📈 Key Charts
+
+**The crash, in one chart** — 13 years of steady growth undone in under 18 months once the fraud was disclosed:
+
+![Yes Bank Closing Price Trend](images/price_crash.png)
+
+**What drives the prediction** — Ridge Regression standardized coefficients:
+
+![Feature Importance](images/feature_importance.png)
+
+## ⚠️ Limitations
+
+- Small dataset — only 185 monthly observations, which limits how much a flexible model (like Random Forest) can learn
+- Monthly (not daily) granularity — misses shorter-term price dynamics
+- No macroeconomic, news, or sentiment features — the model only ever sees the bank's own past prices, so it cannot anticipate event-driven shocks like the 2018 fraud disclosure
+- Holdout set is small (~28 months) and entirely from the volatile post-crisis period, which is a deliberately hard test but also a high-variance one
+
+## 🔮 Future Work
+
+- Add a boosting model (XGBoost / Gradient Boosting) for comparison
+- Ensemble/blend Ridge and Random Forest predictions
+- Generate prediction intervals (not just point estimates), especially for high-volatility periods
+- Incorporate external features (news sentiment, sector indices, macro indicators)
+
 ## 📁 Repository Contents
 
-- `Sample_ML_Submission_Template.ipynb` — full end-to-end notebook (EDA → hypothesis testing → feature engineering → ML modeling)
-- `Sample_EDA_Submission_Template.ipynb` — EDA-only notebook
+- `YesBank_ML.ipynb` — full end-to-end notebook (EDA → hypothesis testing → feature engineering → ML modeling)
+- `YesBank_EDA.ipynb` — EDA-only notebook
 - `data_YesBank_StockPrices.csv` — dataset
-- `Yes_Bank_Insights.pptx` — insights presentation deck
-- `Yes_Bank_Video_Script.md` — video narration script
 
 ## 🚀 How to Run
 
 1. Clone the repo or download the files:
    ```
-   git clone https://github.com/sandeep-sankhla20/Yes-bank.git
+   git clone https://github.com/sandeep-sankhla20/YesBank-Stock-Prediction.git
    ```
-2. Open `Sample_ML_Submission_Template.ipynb` in [Google Colab](https://colab.research.google.com/) or Jupyter
+2. Open `YesBank_ML.ipynb` in [Google Colab](https://colab.research.google.com/) or Jupyter
 3. Upload `data_YesBank_StockPrices.csv` to the same environment (or your Colab session storage)
 4. Run all cells top to bottom
 
 ## 🔗 Project Repository
 
-[github.com/sandeep-sankhla20/Yes-bank](https://github.com/sandeep-sankhla20/YesBank-Stock-Prediction)
+[github.com/sandeep-sankhla20/YesBank-Stock-Prediction](https://github.com/sandeep-sankhla20/YesBank-Stock-Prediction)
 
 ## ✍️ Author
 
